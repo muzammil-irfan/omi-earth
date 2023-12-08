@@ -1,0 +1,5 @@
+/* In your fonts.css file inside the styles folder */
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/fonts/Poppins-Regular.ttf") format("truetype");
+}
