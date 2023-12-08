@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import image4 from "../../assets/4.png";
 import image2 from "../../assets/2.png";
 import image3 from "../../assets/3.png";
@@ -17,15 +17,14 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Box, Button, Flex, Image } from "@chakra-ui/react";
 
 export default function Carousel() {
-  const mainSwiperRef = useRef<any>(null);
+  const [rerender, setRerender] = useState(false); //Just to rerender the carousel to make both swipers sync with each other using below ref.
   const thumbsSwiperRef = useRef<any>(null);
 
   useEffect(() => {
-    if (mainSwiperRef.current && thumbsSwiperRef.current) {
-      mainSwiperRef.current.controller.control(thumbsSwiperRef.current);
-      thumbsSwiperRef.current.controller.control(mainSwiperRef.current);
-    }
+    console.log(rerender);
+    setRerender(true);
   }, []);
+
   return (
     <Box>
       <Swiper
@@ -38,7 +37,7 @@ export default function Carousel() {
           <Flex
             width="full"
             pos="relative"
-            minH={{md:"500px"}}
+            minH={{ md: "500px" }}
             flexDirection={{ base: "column", md: "row" }}
           >
             <Button
@@ -48,12 +47,11 @@ export default function Carousel() {
               rounded={20}
               px={5}
               minW="70px"
-              mx={2}
-
+              mx={{ md: 2 }}
               width={{ base: "min-content", md: "unset" }}
               marginTop={{ md: "15%" }}
               boxShadow="0 10px 30px rgba(240, 78, 78, 0.5)"
-              pos="relative"
+              pos={{ base: "absolute", md: "relative" }}
             >
               SALE
             </Button>
@@ -71,6 +69,7 @@ export default function Carousel() {
         </SwiperSlide>
       </Swiper>
       <Swiper
+        ref={thumbsSwiperRef}
         onSwiper={(swiper) => (thumbsSwiperRef.current = swiper)}
         spaceBetween={10}
         slidesPerView={4}
@@ -86,28 +85,28 @@ export default function Carousel() {
             slidesPerView: 3,
           },
           "900": {
-            slidesPerView: 4    ,
+            slidesPerView: 4,
           },
         }}
       >
         <SwiperSlide>
           <Box height="125px" overflow={"hidden"} rounded={10}>
-          <img  src={image4} />
+            <img src={image4} />
           </Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box height="125px" overflow={"hidden"} rounded={10}>
-          <img  src={image2} />
+            <img src={image2} />
           </Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box height="125px" overflow={"hidden"} rounded={10}>
-          <img  src={image3} />
+            <img src={image3} />
           </Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box height="125px" overflow={"hidden"} rounded={10}>
-          <img  src={image5} />
+            <img src={image5} />
           </Box>
         </SwiperSlide>
       </Swiper>

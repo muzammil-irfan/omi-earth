@@ -28,9 +28,9 @@ export default function ServiceSection() {
                   transform="translate(14.277 12.173)"
                   fill="none"
                   stroke="#39b54a"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector-2"
@@ -39,9 +39,9 @@ export default function ServiceSection() {
                   transform="matrix(0.007, -1, 1, 0.007, 7.901, 28.585)"
                   fill="none"
                   stroke="#39b54a"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <g id="Group-2" data-name="Group">
                   <path
@@ -51,9 +51,9 @@ export default function ServiceSection() {
                     transform="translate(6 23.117)"
                     fill="none"
                     stroke="#39b54a"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                   />
                   <path
                     id="Vector-4"
@@ -62,9 +62,9 @@ export default function ServiceSection() {
                     transform="translate(20.833 23.117)"
                     fill="none"
                     stroke="#39b54a"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                   />
                 </g>
               </g>
@@ -90,9 +90,9 @@ export default function ServiceSection() {
                   transform="translate(7.667 9)"
                   fill="none"
                   stroke="#39b54a"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector-2"
@@ -101,9 +101,9 @@ export default function ServiceSection() {
                   transform="translate(15.217 18.583)"
                   fill="none"
                   stroke="#39b54a"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
               </g>
             </svg>
@@ -132,9 +132,9 @@ export default function ServiceSection() {
                   transform="translate(9.571 -4.588)"
                   fill="none"
                   stroke="#39b54a"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
               </g>
             </svg>

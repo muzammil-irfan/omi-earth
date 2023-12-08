@@ -15,17 +15,17 @@ export default function Header() {
         justifyContent={{ base: "end", xl: "space-between" }}
         gap={20}
         flex={2}
-        maxW={{ base: "90%", md: "650px", "2xl": "1000px" }}
+        maxW={{ base: "90%", md: "850px", "2xl": "950px" }}
         mt={{ base: 4, md: 0 }}
       >
         <HStack
           justifyContent={{ base: "end", xl: "space-between" }}
-          maxW={{xl:"600px","2xl":"50vw"}}
+          maxW={{xl:"700px","2xl":"50vw"}}
           flex={2}
           display={{ base: "none", xl: "flex" }}
         >
           {menuItems.map((item) => (
-            <Link key={item.href}>
+            <Link key={item.label}>
               <Text
                 fontSize={{ base: "16px", md: "21px" }}
                 fontWeight={"semibold"}
@@ -70,8 +70,8 @@ export default function Header() {
                   data-name="3"
                   transform="translate(1512 54)"
                   fill="#fff"
-                  font-size="13"
-                  font-family="SegoeUI, Segoe UI"
+                  fontSize="13"
+                  fontFamily="SegoeUI, Segoe UI"
                 >
                   <tspan x="-3.504" y="0">
                     3

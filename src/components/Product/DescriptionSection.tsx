@@ -39,6 +39,7 @@ export default function DescriptionSection() {
                   onClick={() => {
                     setTab(item);
                   }}
+                  key={item}
                 >
                   {item}
                 </Button>
@@ -54,6 +55,7 @@ export default function DescriptionSection() {
                   onClick={() => {
                     setTab(item);
                   }}
+                  key={item}
                 >
                   {item}
                 </Button>
