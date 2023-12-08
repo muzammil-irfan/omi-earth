@@ -1,4 +1,4 @@
-import { HStack, Icon, IconButton, Image, Link, Text } from "@chakra-ui/react";
+import { HStack, IconButton, Image, Link, Text } from "@chakra-ui/react";
 import Logo from "../assets/logo.png";
 
 export default function Header() {

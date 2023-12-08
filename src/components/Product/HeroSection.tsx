@@ -2,7 +2,6 @@ import {
   Box,
   Flex,
   Stack,
-  Image,
   Heading,
   Text,
   HStack,
@@ -13,7 +12,6 @@ import {
 import React from "react";
 import Header from "../Header";
 import CommonContainer from "../shared/CommonContainer";
-import shilajit from "../../assets/4.png";
 import Rating from "../shared/Rating";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import {

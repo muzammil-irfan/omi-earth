@@ -1,8 +1,6 @@
-import React from "react";
 import {
   Flex,
   Box,
-  Image,
   Text,
   Link,
   IconButton,
@@ -23,12 +21,6 @@ import {
 import CommonContainer from "./shared/CommonContainer";
 import { CiLocationOn } from "react-icons/ci";
 
-const socialLinks = [
-  { label: "Facebook", href: "#" },
-  { label: "Twitter", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "LinkedIn", href: "#" },
-];
 
 const usefulLinks = [
   {

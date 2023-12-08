@@ -8,7 +8,6 @@ import {
   Stack,
   Image,
 } from "@chakra-ui/react";
-import React from "react";
 import InfoImage from "../../assets/shilajit-info.png";
 import Rating from "../shared/Rating";
 
