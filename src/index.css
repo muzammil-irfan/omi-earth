@@ -1,6 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 /* In your CSS file */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 /* @font-face {
   font-family: 'Poppins';
   
@@ -9,6 +9,22 @@
 } */
 
 body {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
+iframe {
+  width: 900px;
+}
+
+@media (max-width:1024px){
+  iframe{
+    width:80vw;
+    height:350px;
+  }
+}
+@media (max-width:640px){
+  iframe{
+    width:80vw;
+    height:350px;
+  }
+}

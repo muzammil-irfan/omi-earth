@@ -1,13 +1,17 @@
-import { Flex, Box, Heading, Text, Image, Stack } from "@chakra-ui/react";
+import { Flex, Box, Heading, Text, Image, Stack, Button } from "@chakra-ui/react";
 import InfoImage from "../../assets/support.png";
 import CommonContainer from "../shared/CommonContainer";
 
 export default function FeaturesSection() {
   return (
     <CommonContainer>
-      <Flex my={10} gap={{ base: 10, lg: 20 }}>
-        
-          <Stack w="50%">
+      <Flex
+        my={10}
+        px={{xl:5}}
+        gap={{ base: 10, xl:28 }}
+        flexDir={{ base: "column-reverse", lg: "row" }}
+      >
+        <Stack w={{ lg: "50%" }}>
           <Text color="brand.500" mb={1}>
             #Shop the look
           </Text>
@@ -18,16 +22,21 @@ export default function FeaturesSection() {
           >
             Why Shilajit?
           </Heading>
-            {txtArr.map((item) => {
-              return (
-                <Text key={item} my={2}>
-                  {item}
-                </Text>
-              );
-            })}
-          </Stack>
-        <Box w="50%" zIndex={1}>
-          <Image src={InfoImage} />
+          {txtArr.map((item) => {
+            return (
+              <Text key={item} my={2} fontSize={{lg:"14px",xl:"16px"}}>
+                {item}
+              </Text>
+            );
+          })}
+          <Box>
+            <Button variant="custom" fontWeight="400" >
+              ADD TO CART
+            </Button>
+          </Box>
+        </Stack>
+        <Box w={{ lg: "50%" }} zIndex={1}>
+          <Image src={InfoImage} w="full" />
         </Box>
       </Flex>
     </CommonContainer>

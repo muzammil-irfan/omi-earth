@@ -145,7 +145,7 @@ export default function ServiceSection() {
           </Stack>
         </HStack>
       </SimpleGrid>
-      <Button width={{ base: "200px", md: "600px" }} variant={"custom"}>Order Now</Button>
+      <Button width={{ base: "200px", md: "400px" }} boxShadow="0 10px 30px #39B54A80" py={8} variant={"custom"} >Order Now</Button>
     </Stack>
   );
 }

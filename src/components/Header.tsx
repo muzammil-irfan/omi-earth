@@ -15,12 +15,12 @@ export default function Header() {
         justifyContent={{ base: "end", xl: "space-between" }}
         gap={20}
         flex={2}
-        maxW={{ base: "90%", md: "900px" }}
+        maxW={{ base: "90%", md: "750px", "2xl": "850px" }}
         mt={{ base: 4, md: 0 }}
       >
         <HStack
           justifyContent={{ base: "end", xl: "space-between" }}
-          maxW="700px"
+          maxW={{xl:"600px","2xl":"700px"}}
           flex={2}
           display={{ base: "none", xl: "flex" }}
         >

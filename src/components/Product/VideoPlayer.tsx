@@ -12,7 +12,7 @@ const VideoPlayer = () => {
     "https://www.youtube.com/embed/6VoSqfQZ_TQ?si=JURSc8FS144DjegN";
 
   return (
-    <Box position="relative" maxW="800px" mx="auto">
+    <Box position="relative" maxW="900px" mx="auto">
       {!isPlaying && (
         <Box
           as="button"
@@ -46,10 +46,11 @@ const VideoPlayer = () => {
 
       {isPlaying ? (
         <iframe
-          width="800px"
+          width="900px"
           height="500px"
           src={videoUrl}
           title="Video Player"
+          
           frameBorder="0"
           allowFullScreen
         ></iframe>
@@ -57,7 +58,8 @@ const VideoPlayer = () => {
         <Image
           src={previewImageUrl}
           alt="Video Preview"
-          height="500px"
+          minW={{base:"80vw",lg:"900px"}}
+          height={{base:"350px",lg:"500px"}}
           objectFit="cover"
         />
       )}

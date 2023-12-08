@@ -6,11 +6,11 @@ export default function FeaturesSection() {
   return (
     <Box position="relative" bg="brand.400" my={10}>
       <CommonContainer>
-        <Flex my={10} gap={{ base: 10, lg: 20 }} px={5} bg="brand.400" >
-          <Stack w="40%" zIndex={1} justifyContent={"center"}>
+        <Flex my={10} gap={{ base: 10, xl:16, "2xl": 20 }} bg="brand.400" flexDir={{base:"column",lg:"row"}}>
+          <Stack w={{lg:"50%"}} zIndex={1} justifyContent={"center"}>
             <Image src={InfoImage} />
           </Stack>
-          <Box w="60%">
+          <Box w={{lg:"50%"}}>
             <Heading
               py={4}
               mb={2}
@@ -23,13 +23,14 @@ export default function FeaturesSection() {
               <Text
                 key={index}
                 dangerouslySetInnerHTML={{ __html: text }}
-                py={2}
+                py={{base:2,lg:0,xl:2}}
               />
             ))}
           </Box>
         </Flex>
       </CommonContainer>
       <Box
+      display={{base:"none",lg:"block"}}
         bg="brand.500"
         height="350px"
         width="30%"

@@ -15,16 +15,16 @@ export default function DescriptionSection() {
   return (
     <Flex
       my={{ base: 10, md: 16 }}
-      gap={{ base: 10, lg: 5, xl: 20 }}
-      px={{ xl: 5 }}
-      flexDir={{ base: "column", lg: "row" }}
+      gap={{ base: 10, lg: 5, xl: 10, "2xl": 16 }}
+      px={{ "2xl": 5 }}
+      flexDir={{ base: "column", xl: "row" }}
     >
       <Box
-        w={{ lg: "70%", xl: "60%" }}
+        w={{  xl: "60%" }}
         p={{ base: 8, lg: 16 }}
         boxShadow="0 10px 90px rgba(0, 0, 0, 0.07)"
       >
-        <HStack spacing={4} flexWrap={"wrap"}>
+        <HStack spacing={4} flexWrap={{base:"wrap",xl:"unset"}}>
           <Button variant="custom" boxShadow="0 10px 30px #39B54A80">
             Description
           </Button>

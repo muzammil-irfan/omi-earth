@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import CommonContainer from "../shared/CommonContainer";
 import VideoPlayer from "./VideoPlayer";
 
@@ -14,7 +7,7 @@ export default function SupportSection() {
     <Box bg="black" pos="relative" mt={20}>
       <CommonContainer>
         <Stack alignItems={"center"} gap={4} pb={10} color="white">
-          <Box height="400px" />
+          <Box height={{base:"250px",sm:"250px",lg:"400px"}} />
           <Text color="#F76954">vlog</Text>
           <Heading color="white">Supports Heart Health</Heading>
           <Box textAlign="center" maxW="900px">
@@ -32,14 +25,9 @@ export default function SupportSection() {
             Order Now
           </Button>
         </Stack>
-      <Flex
-      pos="absolute"
-      top="-20"
-      left="50%"
-      transform="translateX(-50%)"
-    >
-      <VideoPlayer />
-    </Flex>
+        <Flex pos="absolute" top="-20" left="50%" transform="translateX(-50%)">
+          <VideoPlayer />
+        </Flex>
       </CommonContainer>
     </Box>
   );
