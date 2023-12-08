@@ -79,7 +79,7 @@ export default function DescriptionSection() {
         </Stack>
       </Box>
       <Box
-        w={{ lg: "30%" }}
+        w={{ xl: "30%" }}
         p={5}
         boxShadow="0 10px 90px rgba(0, 0, 0, 0.07)"
         pos="relative"
@@ -87,7 +87,7 @@ export default function DescriptionSection() {
         maxW={{ xl: "320px" }}
         height="fit-content"
       >
-        <Image src={InfoImage} width={{ base: "100%", lg: "unset" }} pr={3} />
+        <Image src={InfoImage} width={{ base: "100%", xl: "unset" }} pr={3} />
         <Flex justify={"space-between"} my={5} flexDir={{ base: "row" }}>
           <Stack>
             <Rating rating={5} />
