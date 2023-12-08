@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Flex,
   Heading,
@@ -7,7 +6,6 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
 
 export default function OurMission() {
   return (
