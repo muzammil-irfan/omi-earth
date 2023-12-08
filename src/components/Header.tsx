@@ -15,12 +15,12 @@ export default function Header() {
         justifyContent={{ base: "end", xl: "space-between" }}
         gap={20}
         flex={2}
-        maxW={{ base: "90%", md: "750px", "2xl": "850px" }}
+        maxW={{ base: "90%", md: "650px", "2xl": "1000px" }}
         mt={{ base: 4, md: 0 }}
       >
         <HStack
           justifyContent={{ base: "end", xl: "space-between" }}
-          maxW={{xl:"600px","2xl":"700px"}}
+          maxW={{xl:"600px","2xl":"50vw"}}
           flex={2}
           display={{ base: "none", xl: "flex" }}
         >
@@ -28,7 +28,7 @@ export default function Header() {
             <Link key={item.href}>
               <Text
                 fontSize={{ base: "16px", md: "21px" }}
-                fontWeight={"bolder"}
+                fontWeight={"semibold"}
                 color="black"
               >
                 {item.label}
@@ -109,10 +109,9 @@ export default function Header() {
 }
 
 const menuItems = [
-  { href: "#", label: "Home" },
-  { href: "#", label: "Pages" },
-  { href: "#", label: "Portfolio" },
-  { href: "#", label: "Short Codes" },
-  { href: "#", label: "Blog" },
-  { href: "#", label: "Shop" },
+  { href: "#", label: "Shilajit" },
+  { href: "#", label: "Service Quality" },
+  { href: "#", label: "Key Features" },
+  { href: "#", label: "Why Shilajit?" },
+  { href: "#", label: "Contact" }
 ];

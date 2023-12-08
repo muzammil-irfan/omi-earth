@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import image1 from "../../assets/1.png";
+import image4 from "../../assets/4.png";
 import image2 from "../../assets/2.png";
 import image3 from "../../assets/3.png";
 import image5 from "../../assets/5.png";
@@ -42,20 +42,22 @@ export default function Carousel() {
             flexDirection={{ base: "column", md: "row" }}
           >
             <Button
-              bg="red"
-              _hover={{ bgColor: "red" }}
+              bg="#F04E4E"
+              _hover={{ bgColor: "#F04E4E" }}
               color="white"
               rounded={20}
               px={5}
-              mx={4}
+              minW="70px"
+              mx={2}
+
               width={{ base: "min-content", md: "unset" }}
               marginTop={{ md: "15%" }}
               boxShadow="0 10px 30px rgba(240, 78, 78, 0.5)"
               pos="relative"
             >
-              Sale
+              SALE
             </Button>
-            <Image src={image1} />
+            <Image src={image4} />
           </Flex>
         </SwiperSlide>
         <SwiperSlide>
@@ -89,16 +91,24 @@ export default function Carousel() {
         }}
       >
         <SwiperSlide>
-          <img src={image1} />
+          <Box height="125px" overflow={"hidden"} rounded={10}>
+          <img  src={image4} />
+          </Box>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image2} />
+          <Box height="125px" overflow={"hidden"} rounded={10}>
+          <img  src={image2} />
+          </Box>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image3} />
+          <Box height="125px" overflow={"hidden"} rounded={10}>
+          <img  src={image3} />
+          </Box>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image5} />
+          <Box height="125px" overflow={"hidden"} rounded={10}>
+          <img  src={image5} />
+          </Box>
         </SwiperSlide>
       </Swiper>
     </Box>

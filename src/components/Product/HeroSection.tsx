@@ -41,16 +41,22 @@ export default function HeroSection() {
   };
 
   return (
-    <Stack bg={"brand.400"} pb={{base:8,md:16}}>
+    <Stack bg={"brand.400"} pb={{ base: 8, md: 16 }}>
       <CommonContainer>
         <Header />
 
-        <Flex gap={{ base: 5, md: 10,xl:20, "2xl": 40 }} flexDir={{base:"column",xl:"row"}}>
-          <Box width={"full"} maxW={{base:"full",xl:"50%"}}>
+        <Flex
+          gap={{ base: 5, md: 10, xl: 20, "2xl": 40 }}
+          flexDir={{ base: "column", xl: "row" }}
+        >
+          <Box width={"full"} maxW={{ base: "full", xl: "50%" }}>
             <Carousel />
           </Box>
-          <Stack my={5} width={{xl:"50%"}}>
-            <Heading fontSize={{ base: "28px", md: "32px",lg:"36px", "2xl": "48px" }} fontWeight="bolder">
+          <Stack my={5} width={{ xl: "50%" }}>
+            <Heading
+              fontSize={{ base: "28px", md: "32px", lg: "36px", "2xl": "48px" }}
+              fontWeight="bold"
+            >
               Shilajit
             </Heading>
             <Rating rating={4} totalReviews={3} />
@@ -68,7 +74,12 @@ export default function HeroSection() {
               fontSize="18px"
               divider={<StackDivider />}
             >
-              <Flex justifyContent="space-between" gap={5} px={4} flexDir={{base:"column",md:"row"}}>
+              <Flex
+                justifyContent="space-between"
+                gap={5}
+                px={4}
+                flexDir={{ base: "column", md: "row" }}
+              >
                 <Box
                   w="30px"
                   h="30px"
@@ -105,7 +116,12 @@ export default function HeroSection() {
                 </HStack>
               </Flex>
 
-              <Flex justifyContent="space-between" gap={5} px={4} flexDir={{base:"column",md:"row"}}>
+              <Flex
+                justifyContent="space-between"
+                gap={5}
+                px={4}
+                flexDir={{ base: "column", md: "row" }}
+              >
                 <Box
                   w="30px"
                   h="30px"
@@ -131,7 +147,7 @@ export default function HeroSection() {
                   <Text>One Time Purchase</Text>
                   <Text>or 4 interest-free payments of $16.75 with sezzle</Text>
                 </Stack>
-                <Text color="#ccc" >$99.99</Text>
+                <Text color="#ccc">$99.99</Text>
               </Flex>
             </Stack>
 
@@ -144,36 +160,41 @@ export default function HeroSection() {
               >
                 $99.99
               </Text>
-              <Text fontWeight={600} color="brand.500" >
+              <Text fontWeight={600} color="brand.500">
                 $69.00
               </Text>
             </HStack>
 
-            <HStack gap={{base:3,md:5,lg:10}}>
+            <HStack gap={{ base: 3, md: 5, lg: 10 }}>
               <Counter
                 count={count}
                 increment={increment}
                 decrement={decrement}
               />
-              <Button variant="custom" w={{ base: "200px", md: "300px",lg:"full" }} >
+              <Button
+                variant="custom"
+                w={{ base: "200px", md: "300px", lg: "full" }}
+              >
                 ADD TO CART
               </Button>
             </HStack>
 
             <HStack gap={10} my={4}>
-              <Text color="black" fontWeight="bold" fontSize="18px">SHARE:</Text>
+              <Text color="black" fontWeight="bold" fontSize="18px">
+                SHARE:
+              </Text>
               <HStack>
                 <IconButton aria-label="Facebook" bg="white" rounded="full">
-                  <FaFacebook  color={"#000"} />
+                  <FaFacebook color={"#000"} />
                 </IconButton>
                 <IconButton aria-label="Twitter" bg="white" rounded="full">
-                  <FaTwitter  color={"#BBC7CD"} />
+                  <FaTwitter color={"#BBC7CD"} />
                 </IconButton>
                 <IconButton aria-label="Google Plus" bg="white" rounded="full">
-                  <FaGooglePlus  color={"#BBC7CD"} />
+                  <FaGooglePlus color={"#BBC7CD"} />
                 </IconButton>
                 <IconButton aria-label="Pinterest" bg="white" rounded="full">
-                  <FaPinterest  color={"#BBC7CD"} />
+                  <FaPinterest color={"#BBC7CD"} />
                 </IconButton>
               </HStack>
             </HStack>
@@ -188,7 +209,6 @@ const Counter: React.FC<CounterProps> = ({ count, increment, decrement }) => {
   return (
     <HStack
       width="140px"
-
       border="2px solid #ECEEF2"
       borderRadius={40}
       padding={"8px"}

@@ -79,6 +79,17 @@ const helpLinks = [
 const Footer = () => {
   return (
     <footer>
+      <Box bgColor={"#171B2A"} bgSize="cover" py={1} color="white">
+        <CommonContainer>
+          <HStack p={2} bg="">
+            <Text>© 2023, Omiearth s powered by health.</Text>
+          </HStack>
+        </CommonContainer>
+      </Box>
+    </footer>
+  )
+  return (
+    <footer>
       <Box bgImage={bgImage} bgSize="cover" py={{base:10,lg:20}} pb={{lg:40}} color="white">
         <CommonContainer>
           <SimpleGrid
@@ -182,10 +193,10 @@ const Footer = () => {
           </SimpleGrid>
         </CommonContainer>
       </Box>
-      <Box bgColor={"blackAlpha.800"} bgSize="cover" py={2} color="white">
+      <Box bgColor={"#171B2A"} bgSize="cover" py={2} color="white">
         <CommonContainer>
           <HStack p={2} bg="">
-            <Text>© Omiearth all right reserved</Text>
+            <Text>© 2023, Omiearth s powered by health.</Text>
           </HStack>
         </CommonContainer>
       </Box>

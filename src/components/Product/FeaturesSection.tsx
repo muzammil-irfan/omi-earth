@@ -6,7 +6,7 @@ export default function FeaturesSection() {
   return (
     <Box position="relative" bg="brand.400" my={10}>
       <CommonContainer>
-        <Flex my={10} gap={{ base: 10, xl:16, "2xl": 20 }} bg="brand.400" flexDir={{base:"column",lg:"row"}}>
+        <Flex my={{base:10,lg:20}} gap={{ base: 10, xl:16, "2xl": 20 }} bg="brand.400" flexDir={{base:"column",lg:"row"}}>
           <Stack w={{lg:"50%"}} zIndex={1} justifyContent={"center"}>
             <Image src={InfoImage} />
           </Stack>
@@ -15,12 +15,13 @@ export default function FeaturesSection() {
               py={4}
               mb={2}
               fontWeight="bold"
-              fontSize={{ base: "18px", md: "22px", "2xl": "28px" }}
+              fontSize={{ base: "28px", lg: "32px", "xl": "40px" }}
             >
               Key Features
             </Heading>
             {txtArr.map((text, index) => (
               <Text
+                fontSize="16px"
                 key={index}
                 dangerouslySetInnerHTML={{ __html: text }}
                 py={{base:2,lg:0,xl:2}}

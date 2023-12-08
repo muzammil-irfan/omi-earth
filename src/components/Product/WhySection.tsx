@@ -6,19 +6,19 @@ export default function FeaturesSection() {
   return (
     <CommonContainer>
       <Flex
-        my={10}
+        my={{base:10,lg:20}}
         px={{xl:5}}
         gap={{ base: 10, xl:28 }}
         flexDir={{ base: "column-reverse", lg: "row" }}
       >
         <Stack w={{ lg: "50%" }}>
-          <Text color="brand.500" mb={1}>
+          <Text color="brand.500" mb={1} fontWeight="medium" fontSize="17px">
             #Shop the look
           </Text>
           <Heading
             pb={2}
             // mb={2}
-            fontSize={{ base: "18px", md: "22px", "2xl": "28px" }}
+            fontSize={{ base: "28px", lg: "32px", "xl": "40px" }}
           >
             Why Shilajit?
           </Heading>
@@ -29,7 +29,7 @@ export default function FeaturesSection() {
               </Text>
             );
           })}
-          <Box>
+          <Box py={6}>
             <Button variant="custom" fontWeight="400" >
               ADD TO CART
             </Button>
