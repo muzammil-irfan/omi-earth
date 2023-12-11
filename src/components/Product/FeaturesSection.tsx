@@ -1,21 +1,26 @@
 import { Flex, Box, Heading, Text, Image, Stack } from "@chakra-ui/react";
-import InfoImage from "../../assets/4.png";
+import InfoImage from "../../assets/Product_page-infographic-3.png";
 import CommonContainer from "../shared/CommonContainer";
 
 export default function FeaturesSection() {
   return (
     <Box position="relative" bg="brand.400" my={10}>
       <CommonContainer>
-        <Flex my={{base:10,lg:20}} gap={{ base: 10, xl:16, "2xl": 20 }} bg="brand.400" flexDir={{base:"column",lg:"row"}}>
-          <Stack w={{lg:"50%"}} zIndex={1} justifyContent={"center"}>
+        <Flex
+          my={{ base: 10, lg: 20 }}
+          gap={{ base: 10, xl: 16, "2xl": 20 }}
+          bg="brand.400"
+          flexDir={{ base: "column", lg: "row" }}
+        >
+          <Stack w={{ lg: "50%" }} zIndex={1} justifyContent={"center"}>
             <Image src={InfoImage} />
           </Stack>
-          <Box w={{lg:"50%"}}>
+          <Box w={{ lg: "50%" }}>
             <Heading
               py={4}
               mb={2}
               fontWeight="bold"
-              fontSize={{ base: "28px", lg: "32px", "xl": "40px" }}
+              fontSize={{ base: "28px", lg: "32px", xl: "40px" }}
             >
               Key Features
             </Heading>
@@ -24,14 +29,14 @@ export default function FeaturesSection() {
                 fontSize="16px"
                 key={index}
                 dangerouslySetInnerHTML={{ __html: text }}
-                py={{base:2,lg:0,xl:2}}
+                py={{ base: 2, lg: 0, xl: 2 }}
               />
             ))}
           </Box>
         </Flex>
       </CommonContainer>
       <Box
-      display={{base:"none",lg:"block"}}
+        display={{ base: "none", lg: "block" }}
         bg="brand.500"
         height="350px"
         width="30%"
@@ -40,9 +45,7 @@ export default function FeaturesSection() {
         left={0}
         transform="translateY(-50%)"
         zIndex={0}
-      >
-        {/* Content of the absolutely positioned Box */}
-      </Box>
+      />
     </Box>
   );
 }
@@ -56,5 +59,4 @@ const txtArr = [
   "<b>Supports Immune System :</b> It can strengthen the immune system, making the body more resilient to illnesses.",
   "<b>Aids in Digestion :</b> Shilajit may aid in digestion and help with gastrointestinal issues.",
   "<b>Promotes Anti-Aging:</b> It is believed to have anti-aging properties, supporting skin health",
-  "<b>Enhances Vitality :</b> It can improve overall vitality and stamina.",
 ];

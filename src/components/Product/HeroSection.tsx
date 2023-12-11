@@ -7,7 +7,6 @@ import {
   HStack,
   StackDivider,
   IconButton,
-  Button,
 } from "@chakra-ui/react";
 import React from "react";
 import Header from "../Header";
@@ -21,6 +20,7 @@ import {
   FaPinterest,
 } from "react-icons/fa";
 import Carousel from "./Carousel";
+import AddToCart from "./AddToCart";
 
 interface CounterProps {
   count: number;
@@ -28,18 +28,46 @@ interface CounterProps {
   decrement: () => void;
 }
 
+const productsData = [
+  {
+    id: "pack4",
+    variantId:"gid://shopify/ProductVariant/47519759728926",
+    title: "Pack of 4",
+    description: "Free Shipping + Save 12%",
+    price: "$350.00",
+    originalPrice: "$396.00",
+  },
+  {
+    id: "pack2",
+    variantId:"gid://shopify/ProductVariant/47519759696158",
+    title: "Pack of 2",
+    description: "Free Shipping + Save 5%",
+    price: "$188.00",
+    originalPrice: "$198.00",
+  },
+  {
+    id: "single",
+    variantId:"gid://shopify/ProductVariant/47519759663390",
+    title: "Single Product",
+    description: "Free Shipping",
+    price: "$99.00",
+  },
+];
+
 export default function HeroSection() {
-  const [subscribe, setSubscribe] = React.useState(true);
-  const [count, setCount] = React.useState(0);
+  const [selectedOption, setSelectedOption] = React.useState("pack4");
+  const [count, setCount] = React.useState(1);
 
   const increment = () => {
     setCount(count + 1);
   };
 
   const decrement = () => {
-    setCount(count - 1);
+    setCount(count > 1 ? count - 1 : 1);
   };
 
+  const selectedProduct = productsData.find((product) => product.id === selectedOption)!;
+  
   return (
     <Stack bg={"brand.400"} pb={{ base: 8, md: 16 }}>
       <CommonContainer>
@@ -74,94 +102,66 @@ export default function HeroSection() {
               fontSize="18px"
               divider={<StackDivider />}
             >
-              <Flex
-                justifyContent="space-between"
-                gap={5}
-                px={4}
-                flexDir={{ base: "column", md: "row" }}
-              >
-                <Box
-                  w="30px"
-                  h="30px"
-                  borderRadius="50%"
-                  bg="white"
-                  border="2px solid #B6B8BA"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  cursor="pointer"
-                  onClick={() => {
-                    setSubscribe(true);
-                  }}
+              {productsData.map((product) => (
+                <Flex
+                  key={product.id}
+                  justifyContent="space-between"
+                  gap={5}
+                  px={4}
+                  flexDir={{ base: "column", md: "row" }}
                 >
                   <Box
-                    w="80%"
-                    h="80%"
+                    w="30px"
+                    h="30px"
                     borderRadius="50%"
-                    bg={subscribe ? "green.500" : "white"}
-                  />
-                </Box>
-                <Stack flex={2}>
-                  <Text fontWeight="bold">Subscribe & Save 10%</Text>
-                  <Text>FREE SHIPPING + Cancel anytime</Text>
-                  <Text textDecoration={"underline"} fontWeight="bold">
-                    YOUR SUBSCRIPTION PERKS +
-                  </Text>
-                </Stack>
-                <HStack alignItems="start">
-                  <Text>$69.00</Text>
-                  <Text color="#ccc" textDecoration={"line-through"}>
-                    $99.99
-                  </Text>
-                </HStack>
-              </Flex>
-
-              <Flex
-                justifyContent="space-between"
-                gap={5}
-                px={4}
-                flexDir={{ base: "column", md: "row" }}
-              >
-                <Box
-                  w="30px"
-                  h="30px"
-                  borderRadius="50%"
-                  bg="white"
-                  border="2px solid #B6B8BA"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  cursor="pointer"
-                  onClick={() => {
-                    setSubscribe(false);
-                  }}
-                >
-                  <Box
-                    w="80%"
-                    h="80%"
-                    borderRadius="50%"
-                    bg={!subscribe ? "green.500" : "white"}
-                  />
-                </Box>
-                <Stack flex={2}>
-                  <Text>One Time Purchase</Text>
-                  <Text>or 4 interest-free payments of $16.75 with sezzle</Text>
-                </Stack>
-                <Text color="#ccc">$99.99</Text>
-              </Flex>
+                    bg="white"
+                    border="2px solid #B6B8BA"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    cursor="pointer"
+                    onClick={() => setSelectedOption(product.id)}
+                  >
+                    <Box
+                      w="80%"
+                      h="80%"
+                      borderRadius="50%"
+                      bg={selectedOption === product.id ? "green.500" : "white"}
+                    />
+                  </Box>
+                  <Stack flex={2}>
+                    <Text fontWeight="bold">{product.title}</Text>
+                    <Text>{product.description}</Text>
+                    {/* Additional information if needed */}
+                  </Stack>
+                  {product.originalPrice ? (
+                    <HStack alignItems="start">
+                      <Text>{product.price}</Text>
+                      <Text color="#ccc" textDecoration={"line-through"}>
+                        {product.originalPrice}
+                      </Text>
+                    </HStack>
+                  ) : (
+                    <Text>{product.price}</Text>
+                  )}
+                </Flex>
+              ))}
             </Stack>
 
             <HStack fontSize={{ base: "22px", md: "28px" }} my={2}>
+              {
+                selectedProduct?.originalPrice &&
               <Text
                 color="#ccc"
                 textDecoration={"line-through"}
                 fontSize={{ base: "18px", md: "20px" }}
                 fontWeight={600}
               >
-                $99.99
+                {selectedProduct?.originalPrice}
               </Text>
+              }
               <Text fontWeight={600} color="brand.500">
-                $69.00
+                {selectedProduct.price}
               </Text>
             </HStack>
 
@@ -171,12 +171,7 @@ export default function HeroSection() {
                 increment={increment}
                 decrement={decrement}
               />
-              <Button
-                variant="custom"
-                w={{ base: "200px", md: "300px", lg: "full" }}
-              >
-                ADD TO CART
-              </Button>
+              <AddToCart quantity={count} variantId={selectedProduct.variantId} />
             </HStack>
 
             <HStack gap={10} my={4}>
@@ -222,6 +217,7 @@ const Counter: React.FC<CounterProps> = ({ count, increment, decrement }) => {
         color="#CED9DF"
         size="sm"
         bg="unset"
+        isDisabled={count <= 1}
       />
       <Text fontSize="xl" fontWeight="bold">
         {count}

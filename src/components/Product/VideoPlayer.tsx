@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box, Image } from "@chakra-ui/react";
-import previewImageUrl from "../../assets/video.png";
+import previewImageUrl from "../../assets/Product_page-infographic-4.png";
 import playBtnImg from "../../assets/play.png"
 
 const VideoPlayer = () => {

@@ -4,7 +4,7 @@ import ProductPage from "./components/Product";
 import theme from "./utils/theme";
 
 function App() {
-  // return <Carousel />
+  
   return (
     <ChakraProvider theme={theme}>
       <ProductPage />

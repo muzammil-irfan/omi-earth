@@ -9,7 +9,7 @@ import {
   Image,
   Avatar,
 } from "@chakra-ui/react";
-import InfoImage from "../../assets/shilajit-info.png";
+import InfoImage from "../../assets/Product_page-infographic-1.png";
 import Rating from "../shared/Rating";
 import React from "react";
 import { BsStarFill } from "react-icons/bs";
@@ -74,7 +74,7 @@ export default function DescriptionSection() {
               Description:
             </Heading>
             <Text fontSize="sm">
-              "Experience the Power of Pure Himalayan Shilajit Gold : Elevate
+              Experience the Power of Pure Himalayan Shilajit Gold : Elevate
               Your Health and Vitality Naturally! Discover the ancient secret to
               holistic well-being with our Pure Soft Resin Shilajit sourced from
               the pristine Himalayan Mountains. This remarkable natural
