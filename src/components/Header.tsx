@@ -1,5 +1,5 @@
 import { HStack, IconButton, Image, Link, Text } from "@chakra-ui/react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.svg";
 
 interface HeaderProps {
   onOpen: () => void;
@@ -18,7 +18,7 @@ export default function Header({ onOpen, cartCount }: HeaderProps) {
       mb={2}
       
     >
-      <Image src={Logo} maxW={{base:"120px",sm:"100%"}} />
+      <Image src={Logo} maxW={{base:"120px",sm:""}} />
 
       <HStack
         justifyContent={{ base: "end", xl: "space-between" }}
