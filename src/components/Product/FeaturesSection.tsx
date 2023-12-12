@@ -4,11 +4,11 @@ import CommonContainer from "../shared/CommonContainer";
 
 export default function FeaturesSection() {
   return (
-    <Box position="relative" bg="brand.400" my={10}>
+    <Box position="relative" bg="brand.400" my={10} >
       <CommonContainer>
         <Flex
-          my={{ base: 10, lg: 20 }}
-          gap={{ base: 10, xl: 16, "2xl": 20 }}
+          my={{ base: 5, sm: 10, lg: 20 }}
+          gap={{ base: 5, md: 10, xl: 16, "2xl": 20 }}
           bg="brand.400"
           flexDir={{ base: "column", lg: "row" }}
         >
@@ -18,7 +18,7 @@ export default function FeaturesSection() {
           <Box w={{ lg: "50%" }}>
             <Heading
               py={4}
-              mb={2}
+              mb={{sm:2}}
               fontWeight="bold"
               fontSize={{ base: "28px", lg: "32px", xl: "40px" }}
             >

@@ -4,9 +4,9 @@ import Cart from "../../../types/Cart";
 import React from "react";
 
 export default function ProceedToCheckout({ cart }: { cart: Cart[] }) {
-    const [loading,setLoading] = React.useState(false)
+  const [loading, setLoading] = React.useState(false);
   const proceedToCheckout = async () => {
-      setLoading(true)
+    setLoading(true);
     try {
       const checkout = await shopifyClient.checkout.create();
 
@@ -18,25 +18,27 @@ export default function ProceedToCheckout({ cart }: { cart: Cart[] }) {
         checkout.id,
         lineItemsToAdd
       );
-      localStorage.removeItem("cart")
+      localStorage.removeItem("cart");
       // Redirect to Shopify Checkout
       window.location.href = updatedCheckout.webUrl;
     } catch (error) {
       console.error("Error adding to cart: ", error);
     } finally {
-        setLoading(false)
+      setLoading(false);
     }
   };
-  // const productId = "gid://shopify/Product/8920837095710";
-
   /*
+  const productId = "gid://shopify/Product/8920837095710";
   useEffect(() => {
     // Fetch all variants of a product
     shopifyClient.product
       .fetch(productId)
       .then((product) => {
         // Process the fetched product data with variants
-        console.log("Fetched Product with Variants:", product);
+        // console.log("Fetched Product with Variants:", product);
+        // product.variants.map((item) => {
+        //   console.log(item.id,item.title);
+        // });
       })
       .catch((error) => console.error("Error fetching product:", error));
   }, []);
@@ -54,7 +56,7 @@ export default function ProceedToCheckout({ cart }: { cart: Cart[] }) {
       isDisabled={cart?.length == 0}
       isLoading={loading}
       _loading={{
-        backgroundColor:"brand.500"
+        backgroundColor: "brand.500",
       }}
       colorScheme={"brand"}
     >

@@ -26,7 +26,7 @@ export default function DescriptionSection() {
     >
       <Box
         w={{ xl: "60%" }}
-        p={{ base: 8, lg: 16 }}
+        p={{ base:4,sm: 8, lg: 16 }}
         boxShadow="0 10px 90px rgba(0, 0, 0, 0.07)"
       >
         <HStack spacing={4} flexWrap={{ base: "wrap", xl: "unset" }}>

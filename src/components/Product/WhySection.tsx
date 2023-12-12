@@ -1,6 +1,7 @@
 import { Flex, Box, Heading, Text, Image, Stack, Button } from "@chakra-ui/react";
 import InfoImage from "../../assets/Product_page-infographic-2.png";
 import CommonContainer from "../shared/CommonContainer";
+import scrollToTop from "../../utils/scrollToTop";
 
 export default function FeaturesSection() {
   return (
@@ -30,7 +31,7 @@ export default function FeaturesSection() {
             );
           })}
           <Box py={6}>
-            <Button variant="custom" fontWeight="400" >
+            <Button variant="custom" fontWeight="400" onClick={scrollToTop}>
               ADD TO CART
             </Button>
           </Box>

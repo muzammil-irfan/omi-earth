@@ -64,10 +64,10 @@ export default function HeroSection() {
           </Box>
           <Stack my={5} width={{ xl: "50%" }}>
             <Heading
-              fontSize={{ base: "28px", md: "32px", lg: "36px", "2xl": "48px" }}
+              fontSize={{ base: "22px", md: "28px", lg: "32px",  }}
               fontWeight="bold"
             >
-              Shilajit
+              Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin Enriched with Fulvic acid
             </Heading>
             <Rating rating={4} totalReviews={3} />
             <Text color="#636363" fontSize={{ "2xl": "18px" }} pr={16}>

@@ -14,17 +14,19 @@ export default function Header({ onOpen, cartCount }: HeaderProps) {
     <HStack
       justifyContent={"space-between"}
       borderBottom={"2px solid #F8E2FD"}
-      py={8}
+      py={{base:4,sm:8}}
       mb={2}
+      
     >
-      <Image src={Logo} />
+      <Image src={Logo} maxW={{base:"120px",sm:"100%"}} />
 
       <HStack
         justifyContent={{ base: "end", xl: "space-between" }}
         gap={20}
         flex={2}
         maxW={{ base: "90%", md: "850px", "2xl": "950px" }}
-        mt={{ base: 4, md: 0 }}
+        
+        
       >
         <HStack
           justifyContent={{ base: "end", xl: "space-between" }}

@@ -7,12 +7,13 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import scrollToTop from "../../utils/scrollToTop";
 
 export default function ServiceSection() {
   return (
     <Stack alignItems={"center"} gap={10} py={10}>
       <Heading fontWeight={"bold"} fontSize={{base:"32px",lg:"40px"}}>Service Quantity</Heading>
-      <SimpleGrid columns={{base:1,md:2,lg:3}} w="full" gap={5} my={5}>
+      <SimpleGrid columns={{base:1,md:2,xl:3}} w="full" gap={5} my={5}>
         <HStack gap={5} justify={"center"}>
           <Box bg={"brand.400"} rounded={10} p={5}>
             <svg
@@ -70,7 +71,7 @@ export default function ServiceSection() {
               </g>
             </svg>
           </Box>
-          <Stack  minWidth="200px">
+          <Stack  minWidth="240px">
             <Heading fontWeight="bold" fontSize="xl">Best For Health</Heading>
             <Text color="#AAAAAA" fontSize="16px">Good for your health</Text>
           </Stack>
@@ -108,7 +109,7 @@ export default function ServiceSection() {
               </g>
             </svg>
           </Box>
-          <Stack  minWidth="200px">
+          <Stack  minWidth="240px">
             <Heading fontWeight="bold" fontSize="xl">Safe And Quality</Heading>
             <Text color="#AAAAAA" fontSize="16px">Guaranteed quality and safe</Text>
           </Stack>
@@ -139,13 +140,13 @@ export default function ServiceSection() {
               </g>
             </svg>
           </Box>
-          <Stack  minWidth="200px">
+          <Stack  minWidth="240px">
             <Heading fontWeight="bold" fontSize="xl">Online Report</Heading>
             <Text color="#AAAAAA" fontSize="16px">24 hour online service</Text>
           </Stack>
         </HStack>
       </SimpleGrid>
-      <Button width={{ base: "200px", md: "350px" }} boxShadow="0 10px 30px #39B54A80" py={8} variant={"custom"} >Order Now</Button>
+      <Button width={{ base: "200px", md: "350px" }} boxShadow="0 10px 30px #39B54A80" py={8} variant={"custom"} onClick={scrollToTop}>Order Now</Button>
     </Stack>
   );
 }
