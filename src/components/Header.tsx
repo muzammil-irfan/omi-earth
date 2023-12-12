@@ -2,6 +2,10 @@ import { HStack, IconButton, Image, Link, Text } from "@chakra-ui/react";
 import Logo from "../assets/logo.png";
 
 export default function Header() {
+
+  const handleCart = ()=>{
+    // shopifyClient.checkout.create();
+  }
   return (
     <HStack
       justifyContent={"space-between"}
@@ -38,7 +42,7 @@ export default function Header() {
         </HStack>
 
         <HStack>
-          <IconButton aria-label="cart" variant="unstyled">
+          <IconButton aria-label="cart" variant="unstyled" onClick={handleCart}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26"
@@ -77,28 +81,6 @@ export default function Header() {
                     3
                   </tspan>
                 </text>
-              </g>
-            </svg>
-          </IconButton>
-          <IconButton aria-label="search" variant="unstyled">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="21"
-              height="30.002"
-              viewBox="0 0 21 30.002"
-            >
-              <g id="Search" transform="translate(-1532 -39.998)">
-                <rect
-                  id="Shape_1_copy"
-                  data-name="Shape 1 copy"
-                  width="18"
-                  height="2"
-                  transform="translate(1535 68)"
-                />
-                <path
-                  id="icon"
-                  d="M1547.152,60.039l-1.664-1.655a9.241,9.241,0,0,1-3.854.784,9.585,9.585,0,1,1,9.547-9.585,9.384,9.384,0,0,1-.788,3.833l1.664,1.657a3.515,3.515,0,0,1-.088,4.879,3.664,3.664,0,0,1-2.54,1.046A3.344,3.344,0,0,1,1547.152,60.039Zm-.087-2.615,1.313,1.308a1.677,1.677,0,0,0,2.365-.087,1.655,1.655,0,0,0,.087-2.353l-1.314-1.307A9.306,9.306,0,0,1,1547.065,57.424Zm-11.036-13.418a7.936,7.936,0,1,0,5.605-2.265A7.9,7.9,0,0,0,1536.029,44.006Zm.35,4.966a.773.773,0,0,1-.613-1.046,6.07,6.07,0,0,1,2.89-3.659,6.138,6.138,0,0,1,4.642-.523.883.883,0,0,1,.7,1.046.832.832,0,0,1-1.051.609,4.359,4.359,0,0,0-5.431,2.963,1.053,1.053,0,0,1-.876.61Z"
-                />
               </g>
             </svg>
           </IconButton>

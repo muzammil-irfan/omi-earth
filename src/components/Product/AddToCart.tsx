@@ -19,9 +19,9 @@ export default function AddToCart({ quantity, variantId }: CartProps) {
         checkout.id,
         lineItemsToAdd
       );
-
+        console.log(checkout,updatedCheckout)
       // Redirect to Shopify Checkout
-        window.location.href = updatedCheckout.webUrl;
+      // window.location.href = updatedCheckout.webUrl;
     } catch (error) {
       console.error("Error adding to cart: ", error);
     }
