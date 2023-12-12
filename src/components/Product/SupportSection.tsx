@@ -28,7 +28,7 @@ export default function SupportSection() {
             </Text>
           </Box>
           <Button width={{ base: "200px" }} p={8} mt={4} variant={"custom"} onClick={scrollToTop}>
-            Order Now
+            Buy Now & Save More
           </Button>
         </Stack>
         <Flex pos="absolute" top="-20" left="50%" transform="translateX(-50%)">
