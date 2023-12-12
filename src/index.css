@@ -4,19 +4,6 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
-iframe {
-  width: 900px;
-}
-
-@media (max-width:1024px){
-  iframe{
-    width:80vw;
-    height:350px;
-  }
-}
-@media (max-width:640px){
-  iframe{
-    width:80vw;
-    height:350px;
-  }
+html {
+  scroll-behavior: smooth;
 }

@@ -13,7 +13,7 @@ import "swiper/css/thumbs";
 import "./carousel.css";
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import { Box, Button, Flex, Image } from "@chakra-ui/react";
+import { Box,  Flex, Image } from "@chakra-ui/react";
 const images = [image1, image2, image3];
 export default function Carousel() {
   const [rerender, setRerender] = useState(false); //Just to rerender the carousel to make both swipers sync with each other using below ref.
@@ -41,7 +41,7 @@ export default function Carousel() {
                 flexDirection={{ base: "column", md: "row" }}
                 // width="fit-content"
               >
-                <Button
+                {/* <Button
                   bg="#F04E4E"
                   _hover={{ bgColor: "#F04E4E" }}
                   color="white"
@@ -55,8 +55,8 @@ export default function Carousel() {
                   pos={{ base: "absolute", md: "relative" }}
                 >
                   SALE
-                </Button>
-                <Image src={img} maxWidth={{md:"80%"}} />
+                </Button> */}
+                <Image src={img} maxWidth={{md:"90%"}} />
               </Flex>
             </SwiperSlide>
           );

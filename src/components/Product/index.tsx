@@ -1,4 +1,5 @@
 import CommonContainer from "../shared/CommonContainer";
+import ContactSection from "./ContactSection";
 import DescriptionSection from "./DescriptionSection";
 import FeaturesSection from "./FeaturesSection";
 import HeroSection from "./HeroSection";
@@ -19,6 +20,7 @@ export default function ProductPage() {
       <WhySection />
       <SupportSection />
       <CommonContainer>
+        <ContactSection />
         <OurMission />
       </CommonContainer>
     </>

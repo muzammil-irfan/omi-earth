@@ -5,12 +5,14 @@ import scrollToTop from "../../utils/scrollToTop";
 
 export default function FeaturesSection() {
   return (
-    <CommonContainer>
+    <CommonContainer  >
       <Flex
         my={{base:10,lg:20}}
         px={{xl:5}}
         gap={{ base: 10, xl:28 }}
         flexDir={{ base: "column-reverse", lg: "row" }}
+        id="why-shilajit"
+        as="section"
       >
         <Stack w={{ lg: "50%" }}>
           <Text color="brand.500" mb={1} fontWeight="medium" fontSize="17px">

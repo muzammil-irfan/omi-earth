@@ -4,7 +4,7 @@ import CommonContainer from "../shared/CommonContainer";
 
 export default function FeaturesSection() {
   return (
-    <Box position="relative" bg="brand.400" my={10} >
+    <Box position="relative" bg="brand.400" my={10}  as="section" id="features">
       <CommonContainer>
         <Flex
           my={{ base: 5, sm: 10, lg: 20 }}

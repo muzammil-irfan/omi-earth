@@ -130,9 +130,9 @@ export default function DescriptionSection() {
 
         {tab == tabsData[2] && (
           <Stack my={8} gap={6}>
-            {["1", "2", "3"].map((item) => {
+            {reviews.map((item) => {
               return (
-                <Flex gap={4} alignItems="center"  key={item}>
+                <Flex gap={4} alignItems="center"  key={item.name}>
                   <Avatar
                     src="/images/gigImage/review.png"
                     size={{ base: "xl" }}
@@ -143,7 +143,7 @@ export default function DescriptionSection() {
                         fontSize={{ base: "12px", md: "16px", xl: "19px" }}
                         fontWeight={"medium"}
                       >
-                        Nath2015
+                        {item.name}
                       </Text>
                       <Flex
                         color={"#ffbe5b"}
@@ -164,8 +164,7 @@ export default function DescriptionSection() {
                       color="gray.500"
                       fontSize={{ base: "13px", xl: "16px" }}
                     >
-                      I asked for some logos for my new publishing company and I
-                      am very pleased with the results
+                      {item.content}
                     </Text>
                   </Stack>
                 </Flex>
@@ -225,3 +224,8 @@ export default function DescriptionSection() {
   );
 }
 const tabsData = ["Description", "Additional Information", "Reviews (3)"];
+const reviews = [
+  { name: "Eva T.", content: "Sustained energy boost, my natural pick-me-up." },
+  { name: "Alex M.", content: "Shilajit enhances my well-being, more focused." },
+  { name: "Nina S.", content: "Love the mineral-rich vitality of Shilajit in my daily routine." },
+];
