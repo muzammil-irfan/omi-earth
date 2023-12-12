@@ -38,7 +38,7 @@ export default function FeaturesSection() {
       <Box
         display={{ base: "none", lg: "block" }}
         bg="brand.500"
-        height="350px"
+        height={{lg:"250px","2xl":"350px"}}
         width="30%"
         position="absolute"
         top="50%"

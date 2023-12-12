@@ -193,7 +193,7 @@ export default function DescriptionSection() {
             >
               Grade A Shilajit
             </Heading>
-            <Flex gap={3}>
+            {/* <Flex gap={3}>
               <HStack gap={3}>
                 <Text
                   // fontWeight={500}
@@ -204,7 +204,7 @@ export default function DescriptionSection() {
                   $69.00
                 </Text>
               </HStack>
-            </Flex>
+            </Flex> */}
           </Stack>
           <Box mt={{ base: 3, xl: 0 }} pos="absolute" top={"15%"} right={"0"}>
             <Button
