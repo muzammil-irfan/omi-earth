@@ -27,7 +27,7 @@ export default function SupportSection() {
               health conditions or are taking medications.
             </Text>
           </Box>
-          <Button width={{ base: "200px" }} p={8} mt={4} variant={"custom"} onClick={scrollToTop}>
+          <Button width={{ base: "250px" }} p={8} mt={4} variant={"custom"} onClick={scrollToTop}>
             Buy Now & Save More
           </Button>
         </Stack>
