@@ -1,11 +1,15 @@
 import { HStack, IconButton, Image, Link, Text } from "@chakra-ui/react";
 import Logo from "../assets/logo.png";
 
-export default function Header() {
+interface HeaderProps {
+  onOpen: () => void;
+  cartCount: number;
+}
 
-  const handleCart = ()=>{
-    // shopifyClient.checkout.create();
-  }
+export default function Header({ onOpen, cartCount }: HeaderProps) {
+  const handleCart = () => {
+    onOpen();
+  };
   return (
     <HStack
       justifyContent={"space-between"}
@@ -24,7 +28,7 @@ export default function Header() {
       >
         <HStack
           justifyContent={{ base: "end", xl: "space-between" }}
-          maxW={{xl:"700px","2xl":"50vw"}}
+          maxW={{ xl: "700px", "2xl": "50vw" }}
           flex={2}
           display={{ base: "none", xl: "flex" }}
         >
@@ -61,26 +65,30 @@ export default function Header() {
                   height="2"
                   transform="translate(1493 68)"
                 />
-                <circle
-                  id="circle"
-                  cx="7.5"
-                  cy="7.5"
-                  r="7.5"
-                  transform="translate(1504 43)"
-                  fill="#8799a3"
-                />
-                <text
-                  id="_3"
-                  data-name="3"
-                  transform="translate(1512 54)"
-                  fill="#fff"
-                  fontSize="13"
-                  fontFamily="SegoeUI, Segoe UI"
-                >
-                  <tspan x="-3.504" y="0">
-                    3
-                  </tspan>
-                </text>
+                {cartCount && (
+                  <>
+                    <circle
+                      id="circle"
+                      cx="7.5"
+                      cy="7.5"
+                      r="7.5"
+                      transform="translate(1504 43)"
+                      fill="#8799a3"
+                    />
+                    <text
+                      id="_3"
+                      data-name={cartCount}
+                      transform="translate(1512 54)"
+                      fill="#fff"
+                      fontSize="13"
+                      fontFamily="SegoeUI, Segoe UI"
+                    >
+                      <tspan x="-3.504" y="0">
+                        {cartCount}
+                      </tspan>
+                    </text>
+                  </>
+                )}
               </g>
             </svg>
           </IconButton>
@@ -95,5 +103,5 @@ const menuItems = [
   { href: "#", label: "Service Quality" },
   { href: "#", label: "Key Features" },
   { href: "#", label: "Why Shilajit?" },
-  { href: "#", label: "Contact" }
+  { href: "#", label: "Contact" },
 ];

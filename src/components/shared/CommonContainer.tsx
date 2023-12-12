@@ -7,7 +7,7 @@ interface CommonContainerProps {
 
 const CommonContainer: React.FC<CommonContainerProps> = ({ children, ...rest }) => {
     return (
-      <Container maxW={{base:"90vw","2xl":"80vw"}} mx="auto" p={4} {...rest} px={{base:0,sm:10}}>
+      <Container maxW={{base:"90vw","2xl":"80vw"}} mx="auto" p={4} {...rest} px={{base:0,md:10}}>
         {children}
       </Container>
     );

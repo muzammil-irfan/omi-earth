@@ -7,10 +7,14 @@ export default function SupportSection() {
     <Box bg="black" pos="relative" mt={20}>
       <CommonContainer>
         <Stack alignItems={"center"} gap={4} pb={10} color="white">
-          <Box height={{base:"250px",sm:"250px",lg:"400px"}} />
+          <Box
+            height={{ base: "30vw", sm: "35vw", md: "250px", lg: "400px" }}
+          />
           <Text color="#F76954">vlog</Text>
-          <Heading color="white">Supports Heart Health</Heading>
-          <Box textAlign="center" maxW="900px">
+          <Heading color="white" fontSize={{ base: "2xl", sm: "4xl" }}>
+            Supports Heart Health
+          </Heading>
+          <Box textAlign="center" maxW="900px" >
             <Text>
               Some research suggests that it may have cardiovascular benefits.
             </Text>

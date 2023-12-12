@@ -35,6 +35,9 @@ const setting = {
           _hover: {
             bg: 'brand.500',
           },
+          _loading: {
+            bg: 'brand.500',
+          },
         },
       },
     },
