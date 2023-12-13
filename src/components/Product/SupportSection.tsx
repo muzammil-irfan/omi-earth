@@ -1,7 +1,6 @@
 import { Box, Button, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import CommonContainer from "../shared/CommonContainer";
 import VideoPlayer from "./VideoPlayer";
-import scrollToTop from "../../utils/scrollToTop";
 
 export default function SupportSection() {
   
@@ -27,7 +26,7 @@ export default function SupportSection() {
               health conditions or are taking medications.
             </Text>
           </Box>
-          <Button width={{ base: "250px" }} p={8} mt={4} variant={"custom"} onClick={scrollToTop}>
+          <Button width={{ base: "250px" }} p={8} mt={4} variant={"custom"} as='a' href="#buy-now">
             Buy Now & Save More
           </Button>
         </Stack>

@@ -14,15 +14,10 @@ import Header from "../Header";
 import CommonContainer from "../shared/CommonContainer";
 import Rating from "../shared/Rating";
 import { FaMinus, FaPlus } from "react-icons/fa";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaGooglePlus,
-  FaPinterest,
-} from "react-icons/fa";
 import Carousel from "./Carousel";
 import productsData from "../../utils/productsData";
 import Cart from "./Cart";
+import ShareButtons from "./ShareBtn";
 
 interface CounterProps {
   count: number;
@@ -64,10 +59,11 @@ export default function HeroSection() {
           </Box>
           <Stack my={5} width={{ xl: "50%" }}>
             <Heading
-              fontSize={{ base: "22px", md: "28px", lg: "32px",  }}
+              fontSize={{ base: "22px", md: "28px", lg: "32px" }}
               fontWeight="bold"
             >
-              Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin Enriched with Fulvic acid
+              Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin
+              Enriched with Fulvic acid
             </Heading>
             <Rating rating={4} totalReviews={3} />
             <Text color="#636363" fontSize={{ "2xl": "18px" }} pr={16}>
@@ -83,6 +79,7 @@ export default function HeroSection() {
               rounded={10}
               fontSize="18px"
               divider={<StackDivider />}
+              id="buy-now"
             >
               {productsData.map((product) => (
                 <Flex
@@ -162,8 +159,13 @@ export default function HeroSection() {
                 setCount={setCount}
               />
             </HStack>
-
-            <HStack gap={10} my={4}>
+            <ShareButtons
+              shareUrl={window.location.host}
+              title={
+                "Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin Enriched with Fulvic acid"
+              }
+            />
+            {/* <HStack gap={10} my={4}>
               <Text color="black" fontWeight="bold" fontSize="18px">
                 SHARE:
               </Text>
@@ -181,7 +183,7 @@ export default function HeroSection() {
                   <FaPinterest color={"#BBC7CD"} />
                 </IconButton>
               </HStack>
-            </HStack>
+            </HStack> */}
           </Stack>
         </Flex>
       </CommonContainer>
