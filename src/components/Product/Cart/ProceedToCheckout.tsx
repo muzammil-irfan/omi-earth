@@ -28,17 +28,17 @@ export default function ProceedToCheckout({ cart }: { cart: Cart[] }) {
     }
   };
   /*
-  const productId = "gid://shopify/Product/8920837095710";
-  useEffect(() => {
+  const productId = "gid://shopify/Product/8327141654783";
+  React.useEffect(() => {
     // Fetch all variants of a product
     shopifyClient.product
       .fetch(productId)
       .then((product) => {
         // Process the fetched product data with variants
         // console.log("Fetched Product with Variants:", product);
-        // product.variants.map((item) => {
-        //   console.log(item.id,item.title);
-        // });
+        product.variants.map((item) => {
+          console.log(item.id,item.title);
+        });
       })
       .catch((error) => console.error("Error fetching product:", error));
   }, []);
