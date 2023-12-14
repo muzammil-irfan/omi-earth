@@ -69,7 +69,7 @@ export default function Carousel() {
       <Swiper
         ref={thumbsSwiperRef}
         onSwiper={(swiper) => (thumbsSwiperRef.current = swiper)}
-        // spaceBetween={10}
+        spaceBetween={10}
         slidesPerView={images.length > 4 ? 4 : images.length}
         freeMode={true}
         watchSlidesProgress={true}

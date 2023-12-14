@@ -1,5 +1,6 @@
 import { HStack, IconButton, Image, Link, Text } from "@chakra-ui/react";
 import Logo from "../assets/logo.svg";
+import Contact from "../assets/Contact.png";
 
 interface HeaderProps {
   onOpen: () => void;
@@ -37,7 +38,38 @@ export default function Header({ onOpen, cartCount }: HeaderProps) {
           </Link>
         ))}
       </HStack>
-      <HStack minW="120px" justifyContent="end">
+      <HStack minW="120px" justifyContent="end" alignItems="center">
+        <IconButton
+          aria-label="cart"
+          variant="unstyled"
+          as="a"
+          href="#contact"
+          display={{ lg: "none" }}
+          height="fit-content"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="30.002"
+            viewBox="0 0 26 30.002"
+          >
+            <g id="Contact" transform="translate(-1493 -39.998)">
+              <image
+                href={Contact}
+                // width="24"
+                // height="30.002"
+                transform="translate(1493 39.998)"
+              />
+              <rect
+                id="Shape_1"
+                data-name="Shape 1"
+                width="24"
+                height="2"
+                transform="translate(1493 68)"
+              />
+            </g>
+          </svg>
+        </IconButton>
         <IconButton aria-label="cart" variant="unstyled" onClick={handleCart}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
