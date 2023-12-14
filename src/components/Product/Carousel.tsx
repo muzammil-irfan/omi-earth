@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import image from "../../assets/product-tab-img.jpg";
 import image1 from "../../assets/product-tab-img-1.jpg";
 import image2 from "../../assets/product-tab-img-2.jpg";
 import image3 from "../../assets/product-tab-img-3.jpg";
@@ -13,14 +14,14 @@ import "swiper/css/thumbs";
 import "./carousel.css";
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import { Box,  Flex, Image } from "@chakra-ui/react";
-const images = [image1, image2, image3];
+import { Box, Flex, Image } from "@chakra-ui/react";
+const images = [image, image1, image2, image3];
 export default function Carousel() {
   const [rerender, setRerender] = useState(false); //Just to rerender the carousel to make both swipers sync with each other using below ref.
   const thumbsSwiperRef = useRef<any>(null);
 
   useEffect(() => {
-    setRerender(rerender ? true : true);//mention to not get error of unused at build time
+    setRerender(rerender ? true : true); //mention to not get error of unused at build time
   }, []);
 
   return (
@@ -31,7 +32,7 @@ export default function Carousel() {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
-        {images.map((img,index) => {
+        {images.map((img, index) => {
           return (
             <SwiperSlide key={index}>
               <Flex
@@ -56,7 +57,10 @@ export default function Carousel() {
                 >
                   SALE
                 </Button> */}
-                <Image src={img} maxWidth={{md:"90%"}} />
+                <Image
+                  src={img}
+                  //maxWidth={{ md: "90%" }}
+                />
               </Flex>
             </SwiperSlide>
           );
@@ -65,8 +69,8 @@ export default function Carousel() {
       <Swiper
         ref={thumbsSwiperRef}
         onSwiper={(swiper) => (thumbsSwiperRef.current = swiper)}
-        spaceBetween={10}
-        slidesPerView={images.length > 4 ? 4: images.length}
+        // spaceBetween={10}
+        slidesPerView={images.length > 4 ? 4 : images.length}
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
@@ -83,7 +87,7 @@ export default function Carousel() {
           },
         }}
       >
-        {images.map((img,index) => {
+        {images.map((img, index) => {
           return (
             <SwiperSlide key={index}>
               <Box height="125px" overflow={"hidden"} rounded={10}>

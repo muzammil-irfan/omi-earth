@@ -80,3 +80,14 @@
     object-fit: cover;
   }
   
+  @media (min-width: 768px){
+    .mySwiper2 {
+      width: 90%;
+      margin-left: 0;
+    }
+    
+    .mySwiper {
+      width: 90%;
+      margin-left: 0;
+    }
+  }

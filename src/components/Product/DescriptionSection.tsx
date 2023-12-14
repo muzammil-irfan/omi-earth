@@ -225,7 +225,7 @@ export default function DescriptionSection() {
 }
 const tabsData = ["Description", "Additional Information", "Reviews (3)"];
 const reviews = [
-  { name: "Eva T.", content: "Sustained energy boost, my natural pick-me-up." },
-  { name: "Alex M.", content: "Shilajit enhances my well-being, more focused." },
-  { name: "Nina S.", content: "Love the mineral-rich vitality of Shilajit in my daily routine." },
+  { name: "Sarah J.", content: "Himalayan Shilajit Gold has become my daily wellness secret! I've noticed a significant boost in my energy levels, and it keeps me going throughout the day. The purity of this product is evident, and I appreciate the authenticity that comes with sourcing it from the Himalayas. Highly recommended for anyone looking to enhance their vitality naturally." },
+  { name: "John M.", content: "I've been using Shilajit Gold for a few weeks now, and I can feel the difference. My focus has improved, and I no longer experience that midday slump. It's impressive how a natural supplement can make such a positive impact. The fact that it's packed with essential minerals is a big plus for me."},
+  { name: "Lisa H.", content: "As someone who leads a hectic lifestyle, Shilajit Gold has been a game-changer. The mental clarity it provides is exactly what I needed. I feel more centered, focused, and energized. Plus, knowing it comes from the Himalayas adds that extra layer of authenticity for me. Definitely a must-try" },
 ];
