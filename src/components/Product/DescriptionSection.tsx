@@ -14,7 +14,6 @@ import Rating from "../shared/Rating";
 import React from "react";
 import { BsStarFill } from "react-icons/bs";
 
-
 export default function DescriptionSection() {
   const [tab, setTab] = React.useState("Description");
   return (
@@ -26,7 +25,7 @@ export default function DescriptionSection() {
     >
       <Box
         w={{ xl: "60%" }}
-        p={{ base:4,sm: 8, lg: 16 }}
+        p={{ base: 4, sm: 8, lg: 16 }}
         boxShadow="0 10px 90px rgba(0, 0, 0, 0.07)"
       >
         <HStack spacing={4} flexWrap={{ base: "wrap", xl: "unset" }}>
@@ -106,12 +105,11 @@ export default function DescriptionSection() {
               Additional Information:
             </Heading>
             <Text fontSize="sm">
-              "Experience the Power of Pure Himalayan Shilajit Gold : Elevate
-              Your Health and Vitality Naturally! Discover the ancient secret to
-              holistic well-being with our Pure Soft Resin Shilajit sourced from
-              the pristine Himalayan Mountains. This remarkable natural
-              substance has been revered for centuries in Eastern cultures for
-              its transformative benefits on both body and mind.
+              Unlock the ancient secrets to holistic well-being with our Pure
+              Soft Resin Shilajit, meticulously sourced from the pristine
+              Himalayan Mountains. This extraordinary natural substance has been
+              revered for centuries in Eastern cultures for its transformative
+              benefits on both body and mind.
             </Text>
             <br />
 
@@ -132,7 +130,7 @@ export default function DescriptionSection() {
           <Stack my={8} gap={6}>
             {reviews.map((item) => {
               return (
-                <Flex gap={4} alignItems="center"  key={item.name}>
+                <Flex gap={4} alignItems="center" key={item.name}>
                   <Avatar
                     src="/images/gigImage/review.png"
                     size={{ base: "xl" }}
@@ -225,7 +223,19 @@ export default function DescriptionSection() {
 }
 const tabsData = ["Description", "Additional Information", "Reviews (3)"];
 const reviews = [
-  { name: "Sarah J.", content: "Himalayan Shilajit Gold has become my daily wellness secret! I've noticed a significant boost in my energy levels, and it keeps me going throughout the day. The purity of this product is evident, and I appreciate the authenticity that comes with sourcing it from the Himalayas. Highly recommended for anyone looking to enhance their vitality naturally." },
-  { name: "John M.", content: "I've been using Shilajit Gold for a few weeks now, and I can feel the difference. My focus has improved, and I no longer experience that midday slump. It's impressive how a natural supplement can make such a positive impact. The fact that it's packed with essential minerals is a big plus for me."},
-  { name: "Lisa H.", content: "As someone who leads a hectic lifestyle, Shilajit Gold has been a game-changer. The mental clarity it provides is exactly what I needed. I feel more centered, focused, and energized. Plus, knowing it comes from the Himalayas adds that extra layer of authenticity for me. Definitely a must-try" },
+  {
+    name: "Sarah J.",
+    content:
+      "Himalayan Shilajit Gold has become my daily wellness secret! I've noticed a significant boost in my energy levels, and it keeps me going throughout the day. The purity of this product is evident, and I appreciate the authenticity that comes with sourcing it from the Himalayas. Highly recommended for anyone looking to enhance their vitality naturally.",
+  },
+  {
+    name: "John M.",
+    content:
+      "I've been using Shilajit Gold for a few weeks now, and I can feel the difference. My focus has improved, and I no longer experience that midday slump. It's impressive how a natural supplement can make such a positive impact. The fact that it's packed with essential minerals is a big plus for me.",
+  },
+  {
+    name: "Lisa H.",
+    content:
+      "As someone who leads a hectic lifestyle, Shilajit Gold has been a game-changer. The mental clarity it provides is exactly what I needed. I feel more centered, focused, and energized. Plus, knowing it comes from the Himalayas adds that extra layer of authenticity for me. Definitely a must-try",
+  },
 ];
