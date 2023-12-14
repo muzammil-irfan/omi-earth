@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from "react";
-import image from "../../assets/product-tab-img.jpg";
 import image1 from "../../assets/product-tab-img-1.jpg";
 import image2 from "../../assets/product-tab-img-2.jpg";
 import image3 from "../../assets/product-tab-img-3.jpg";
@@ -15,7 +14,7 @@ import "./carousel.css";
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Box, Flex, Image } from "@chakra-ui/react";
-const images = [image, image1, image2, image3];
+const images = [image1, image2, image3];
 export default function Carousel() {
   const [rerender, setRerender] = useState(false); //Just to rerender the carousel to make both swipers sync with each other using below ref.
   const thumbsSwiperRef = useRef<any>(null);
