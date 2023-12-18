@@ -11,7 +11,7 @@ import {
   SimpleGrid,
   Stack,
 } from "@chakra-ui/react";
-import bgImage from "../assets/background.png";
+import bgImage from "../assets/webp/background.webp";
 import {
   FaFacebook,
   FaGooglePlus,

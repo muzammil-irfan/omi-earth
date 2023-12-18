@@ -40,6 +40,7 @@ const VideoPlayer = () => {
           maxW={{base:"40px",sm:"60px",lg:"unset"}}
           visibility={!isPlaying ? "visible" : "hidden"}
           alt="Shilajit Benefits"
+          loading="lazy"
         />
       </Box>
       <Box
