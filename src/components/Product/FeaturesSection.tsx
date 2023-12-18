@@ -1,10 +1,11 @@
 import { Flex, Box, Heading, Text, Stack } from "@chakra-ui/react";
 import InfoImage from "../../assets/webp/Product_page-infographic-3.webp";
+import MobileInfoImage from "../../assets/webp/mobile/Product_page-infographic-3.webp";
 import CommonContainer from "../shared/CommonContainer";
 
 export default function FeaturesSection() {
   return (
-    <Box position="relative" bg="brand.400" my={10}  as="section" id="features">
+    <Box position="relative" bg="brand.400" my={10} as="section" id="features">
       <CommonContainer>
         <Flex
           my={{ base: 5, sm: 10, lg: 20 }}
@@ -13,12 +14,17 @@ export default function FeaturesSection() {
           flexDir={{ base: "column", lg: "row" }}
         >
           <Stack w={{ lg: "50%" }} zIndex={1} justifyContent={"center"}>
-            <img src={InfoImage} alt="Features Of Shilajit" loading="lazy" />
+            <img
+              srcSet={`${MobileInfoImage} 480w, ${InfoImage} 1200w`}
+              sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
+              alt="Features Of Shilajit"
+              loading="lazy"
+            />
           </Stack>
           <Box w={{ lg: "50%" }}>
             <Heading
               py={4}
-              mb={{sm:2}}
+              mb={{ sm: 2 }}
               fontWeight="bold"
               fontSize={{ base: "28px", lg: "32px", xl: "40px" }}
             >
@@ -38,7 +44,7 @@ export default function FeaturesSection() {
       <Box
         display={{ base: "none", lg: "block" }}
         bg="brand.500"
-        height={{lg:"250px","2xl":"350px"}}
+        height={{ lg: "250px", "2xl": "350px" }}
         width="30%"
         position="absolute"
         top="50%"

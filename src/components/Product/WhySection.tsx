@@ -1,14 +1,15 @@
 import { Flex, Box, Heading, Text, Stack } from "@chakra-ui/react";
 import InfoImage from "../../assets/webp/Product_page-infographic-2.webp";
+import MobileInfoImage from "../../assets/webp/mobile/Product_page-infographic-2.webp";
 import CommonContainer from "../shared/CommonContainer";
 
 export default function FeaturesSection() {
   return (
-    <CommonContainer  >
+    <CommonContainer>
       <Flex
-        my={{base:10,lg:20}}
-        px={{xl:5}}
-        gap={{ base: 10, xl:28 }}
+        my={{ base: 10, lg: 20 }}
+        px={{ xl: 5 }}
+        gap={{ base: 10, xl: 28 }}
         flexDir={{ base: "column-reverse", lg: "row" }}
         id="why-shilajit"
         as="section"
@@ -20,13 +21,13 @@ export default function FeaturesSection() {
           <Heading
             pb={2}
             // mb={2}
-            fontSize={{ base: "28px", lg: "32px", "xl": "40px" }}
+            fontSize={{ base: "28px", lg: "32px", xl: "40px" }}
           >
             Why Shilajit?
           </Heading>
           {txtArr.map((item) => {
             return (
-              <Text key={item} my={2} fontSize={{lg:"14px",xl:"16px"}}>
+              <Text key={item} my={2} fontSize={{ lg: "14px", xl: "16px" }}>
                 {item}
               </Text>
             );
@@ -38,7 +39,12 @@ export default function FeaturesSection() {
           </Box> */}
         </Stack>
         <Box w={{ lg: "50%" }} zIndex={1}>
-          <img src={InfoImage} width="100%" alt="Why Shilajit" />
+          <img
+            srcSet={`${MobileInfoImage} 480w, ${InfoImage} 1200w`}
+            sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
+            width="100%"
+            alt="Why Shilajit"
+          />
         </Box>
       </Flex>
     </CommonContainer>

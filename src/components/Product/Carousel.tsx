@@ -2,6 +2,9 @@ import { useRef, useEffect, useState } from "react";
 import image1 from "../../assets/webp/product-tab-img-1.webp";
 import image2 from "../../assets/webp/product-tab-img-2.webp";
 import image3 from "../../assets/webp/product-tab-img-3.webp";
+import mobileImage1 from "../../assets/webp/mobile/product-tab-img-1.webp";
+import mobileImage2 from "../../assets/webp/mobile/product-tab-img-2.webp";
+import mobileImage3 from "../../assets/webp/mobile/product-tab-img-3.webp";
 // import image1 from "../../assets/product-tab-img-1.jpg";
 // import image2 from "../../assets/product-tab-img-2.jpg";
 // import image3 from "../../assets/product-tab-img-3.jpg";
@@ -17,7 +20,7 @@ import "./carousel.css";
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Box, Flex } from "@chakra-ui/react";
-const images = [image1, image2, image3];
+const images = [{desktop:image1,mobile:mobileImage1},{desktop:image2,mobile:mobileImage2},{desktop:image3,mobile:mobileImage3}];
 export default function Carousel() {
   const [rerender, setRerender] = useState(false); //Just to rerender the carousel to make both swipers sync with each other using below ref.
   const thumbsSwiperRef = useRef<any>(null);
@@ -60,7 +63,9 @@ export default function Carousel() {
                   SALE
                 </Button> */}
                 <img
-                  src={img}
+                  // src={img.desktop}
+                  srcSet={`${img.mobile} 480w, ${img.desktop} 1200w`}
+                  sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
                   alt={"Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin Enriched with Fulvic Acid"}
                   loading={index != 0 ? "lazy" : undefined}
                   //maxWidth={{ md: "90%" }}
@@ -95,7 +100,8 @@ export default function Carousel() {
           return (
             <SwiperSlide key={index}>
               <Box height="125px" overflow={"hidden"} rounded={10} mr="auto">
-                <img src={img} alt={"Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin Enriched with Fulvic Acid"} />
+                <img srcSet={`${img.mobile} 480w, ${img.desktop} 1200w`}
+                  sizes="(max-width: 767px) 30vw, (min-width: 768px) 20vw" alt={"Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin Enriched with Fulvic Acid"} />
               </Box>
             </SwiperSlide>
           );

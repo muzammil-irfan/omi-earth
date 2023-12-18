@@ -160,7 +160,7 @@ export default function ServiceSection() {
         </HStack>
       </SimpleGrid>
       <Button
-        width={{ base: "200px", md: "350px" }}
+        width={{ base: "220px", md: "350px" }}
         boxShadow="0 10px 30px #39B54A80"
         py={8}
         variant={"custom"}
