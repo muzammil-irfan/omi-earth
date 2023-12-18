@@ -1,4 +1,4 @@
-import { HStack, IconButton, Image, Link, Text } from "@chakra-ui/react";
+import { Box, HStack, IconButton, Image, Link, Text } from "@chakra-ui/react";
 import Logo from "../assets/logo.svg";
 import Contact from "../assets/webp/contact.webp";
 
@@ -18,6 +18,7 @@ export default function Header({ onOpen, cartCount }: HeaderProps) {
       py={{ base: 4, sm: 8 }}
       mb={2}
     >
+      
       <Image src={Logo} alt="OMI Earth" maxW={{ base: "120px", sm: "" }} />
 
       <HStack

@@ -27,7 +27,7 @@ export default function Carousel() {
   }, []);
 
   return (
-    <Box>
+    <Box minH="400px">
       <Swiper
         spaceBetween={30}
         thumbs={{ swiper: thumbsSwiperRef.current }}
