@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/provider";
 import Footer from "./components/Footer";
 import ProductPage from "./components/Product";
 import theme from "./utils/theme";

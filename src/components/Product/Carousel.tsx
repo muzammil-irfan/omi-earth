@@ -94,7 +94,7 @@ export default function Carousel() {
         {images.map((img, index) => {
           return (
             <SwiperSlide key={index}>
-              <Box height="125px" overflow={"hidden"} rounded={10}>
+              <Box height="125px" overflow={"hidden"} rounded={10} mr="auto">
                 <img src={img} alt={"Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin Enriched with Fulvic Acid"} />
               </Box>
             </SwiperSlide>
