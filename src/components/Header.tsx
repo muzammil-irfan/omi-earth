@@ -1,4 +1,4 @@
-import { Box, HStack, IconButton, Image, Link, Text } from "@chakra-ui/react";
+import { HStack, IconButton, Image, Link, Text } from "@chakra-ui/react";
 import Logo from "../assets/logo.svg";
 import Contact from "../assets/webp/contact.webp";
 
