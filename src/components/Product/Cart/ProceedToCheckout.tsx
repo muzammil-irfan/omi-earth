@@ -9,7 +9,7 @@ export default function ProceedToCheckout({ cart }: { cart: Cart[] }) {
     setLoading(true);
     try {
       const checkout = await shopifyClient.checkout.create();
-
+      
       const lineItemsToAdd = cart.map((item) => ({
         variantId: item.variantId,
         quantity: item.quantity,
@@ -19,6 +19,7 @@ export default function ProceedToCheckout({ cart }: { cart: Cart[] }) {
         lineItemsToAdd
       );
       localStorage.removeItem("cart");
+      
       // Redirect to Shopify Checkout
       window.location.href = updatedCheckout.webUrl;
     } catch (error) {

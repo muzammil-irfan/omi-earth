@@ -18,7 +18,7 @@ export default function Header({ onOpen, cartCount }: HeaderProps) {
       py={{ base: 4, sm: 8 }}
       mb={2}
     >
-      <Image src={Logo} maxW={{ base: "120px", sm: "" }} />
+      <Image src={Logo} alt="OMI Earth" maxW={{ base: "120px", sm: "" }} />
 
       <HStack
         justifyContent={{ base: "end", xl: "space-between" }}
@@ -58,6 +58,7 @@ export default function Header({ onOpen, cartCount }: HeaderProps) {
                 href={Contact}
                 // width="24"
                 // height="30.002"
+                
                 transform="translate(1493 39.998)"
               />
               <rect

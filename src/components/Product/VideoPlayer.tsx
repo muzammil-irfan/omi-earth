@@ -33,11 +33,13 @@ const VideoPlayer = () => {
         borderRadius="full"
         pointerEvents="auto" // Set pointerEvents to "auto"
         zIndex={1}
+        title="Play"
       >
         <Image
           src={playBtnImg}
           maxW={{base:"40px",sm:"60px",lg:"unset"}}
           visibility={!isPlaying ? "visible" : "hidden"}
+          alt="Shilajit Benefits"
         />
       </Box>
       <Box

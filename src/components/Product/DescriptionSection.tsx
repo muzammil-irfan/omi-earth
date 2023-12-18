@@ -180,7 +180,7 @@ export default function DescriptionSection() {
         maxW={{ xl: "320px" }}
         height="fit-content"
       >
-        <Image src={InfoImage} width={{ base: "100%", xl: "unset" }} pr={3} />
+        <Image src={InfoImage} width={{ base: "100%", xl: "unset" }} pr={3} alt="Shilajit Health Benefits" />
         <Flex justify={"space-between"} my={5} flexDir={{ base: "row" }}>
           <Stack>
             <Rating rating={5} />

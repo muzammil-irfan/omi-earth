@@ -17,7 +17,7 @@ const Rating: React.FC<RatingProps> = ({ rating, totalReviews }) => {
       <Box mr={2}>{filledStars}{emptyStars}</Box>
       {
           totalReviews &&
-      <Link>
+      <Link href="#">
       <Text color="#0684FF"fontWeight="bold">{`Read ${totalReviews} reviews`}</Text>
       </Link>
       }

@@ -38,7 +38,7 @@ export default function FeaturesSection() {
           </Box> */}
         </Stack>
         <Box w={{ lg: "50%" }} zIndex={1}>
-          <Image src={InfoImage} w="full" />
+          <Image src={InfoImage} w="full" alt="Why Shilajit" />
         </Box>
       </Flex>
     </CommonContainer>

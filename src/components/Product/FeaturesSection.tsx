@@ -13,7 +13,7 @@ export default function FeaturesSection() {
           flexDir={{ base: "column", lg: "row" }}
         >
           <Stack w={{ lg: "50%" }} zIndex={1} justifyContent={"center"}>
-            <Image src={InfoImage} />
+            <Image src={InfoImage} alt="Features Of Shilajit" />
           </Stack>
           <Box w={{ lg: "50%" }}>
             <Heading

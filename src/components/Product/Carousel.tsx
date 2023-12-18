@@ -58,6 +58,7 @@ export default function Carousel() {
                 </Button> */}
                 <Image
                   src={img}
+                  alt={"Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin Enriched with Fulvic Acid"}
                   //maxWidth={{ md: "90%" }}
                 />
               </Flex>
@@ -90,7 +91,7 @@ export default function Carousel() {
           return (
             <SwiperSlide key={index}>
               <Box height="125px" overflow={"hidden"} rounded={10}>
-                <img src={img} />
+                <img src={img} alt={"Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin Enriched with Fulvic Acid"} />
               </Box>
             </SwiperSlide>
           );
