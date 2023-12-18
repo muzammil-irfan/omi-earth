@@ -9,7 +9,7 @@ import {
   Image,
   Avatar,
 } from "@chakra-ui/react";
-import InfoImage from "../../assets/Product_page-infographic-1.png";
+import InfoImage from "../../assets/webp/Product_page-infographic-1.webp";
 import Rating from "../shared/Rating";
 import React from "react";
 import { BsStarFill } from "react-icons/bs";

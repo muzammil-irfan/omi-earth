@@ -1,7 +1,10 @@
 import { useRef, useEffect, useState } from "react";
-import image1 from "../../assets/product-tab-img-1.jpg";
-import image2 from "../../assets/product-tab-img-2.jpg";
-import image3 from "../../assets/product-tab-img-3.jpg";
+import image1 from "../../assets/webp/product-tab-img-1.webp";
+import image2 from "../../assets/webp/product-tab-img-2.webp";
+import image3 from "../../assets/webp/product-tab-img-3.webp";
+// import image1 from "../../assets/product-tab-img-1.jpg";
+// import image2 from "../../assets/product-tab-img-2.jpg";
+// import image3 from "../../assets/product-tab-img-3.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles

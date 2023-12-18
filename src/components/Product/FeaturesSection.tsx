@@ -1,5 +1,5 @@
 import { Flex, Box, Heading, Text, Image, Stack } from "@chakra-ui/react";
-import InfoImage from "../../assets/Product_page-infographic-3.png";
+import InfoImage from "../../assets/webp/Product_page-infographic-3.webp";
 import CommonContainer from "../shared/CommonContainer";
 
 export default function FeaturesSection() {
