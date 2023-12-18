@@ -9,6 +9,9 @@ export default defineConfig({
       output:{
         manualChunks:{
           "@chakra-ui/react":['@chakra-ui/react'],
+          "framer-motion":['framer-motion'],
+          "@emotion/react":['@emotion/react'],
+          "@emotion/styled":['@emotion/styled']
         }
       }
     }
