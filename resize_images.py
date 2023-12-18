@@ -2,7 +2,7 @@ from PIL import Image
 import os
 import shutil
 
-def resize_and_move_images(input_directory, output_directory, target_width=480):
+def resize_and_move_images(input_directory, output_directory, target_width=320):
     # Ensure the output directory exists, or create it
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)

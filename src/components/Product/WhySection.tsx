@@ -1,6 +1,6 @@
 import { Flex, Box, Heading, Text, Stack } from "@chakra-ui/react";
 import InfoImage from "../../assets/webp/Product_page-infographic-2.webp";
-import MobileInfoImage from "../../assets/webp/mobile/Product_page-infographic-2.webp";
+import MobileInfoImage from "../../assets/webp/mobiles/Product_page-infographic-2.webp";
 import CommonContainer from "../shared/CommonContainer";
 
 export default function FeaturesSection() {
@@ -40,7 +40,7 @@ export default function FeaturesSection() {
         </Stack>
         <Box w={{ lg: "50%" }} zIndex={1}>
           <img
-            srcSet={`${MobileInfoImage} 480w, ${InfoImage} 1200w`}
+            srcSet={`${MobileInfoImage} 320w, ${InfoImage} 1200w`}
             sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw"
             width="100%"
             alt="Why Shilajit"
