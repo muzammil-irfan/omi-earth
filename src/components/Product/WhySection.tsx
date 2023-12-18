@@ -1,4 +1,4 @@
-import { Flex, Box, Heading, Text, Image, Stack } from "@chakra-ui/react";
+import { Flex, Box, Heading, Text, Stack } from "@chakra-ui/react";
 import InfoImage from "../../assets/webp/Product_page-infographic-2.webp";
 import CommonContainer from "../shared/CommonContainer";
 
@@ -38,7 +38,7 @@ export default function FeaturesSection() {
           </Box> */}
         </Stack>
         <Box w={{ lg: "50%" }} zIndex={1}>
-          <Image src={InfoImage} w="full" alt="Why Shilajit" />
+          <img src={InfoImage} width="100%" alt="Why Shilajit" />
         </Box>
       </Flex>
     </CommonContainer>

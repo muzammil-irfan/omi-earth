@@ -16,7 +16,7 @@ import "swiper/css/thumbs";
 import "./carousel.css";
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 const images = [image1, image2, image3];
 export default function Carousel() {
   const [rerender, setRerender] = useState(false); //Just to rerender the carousel to make both swipers sync with each other using below ref.
@@ -59,7 +59,7 @@ export default function Carousel() {
                 >
                   SALE
                 </Button> */}
-                <Image
+                <img
                   src={img}
                   alt={"Omiearth 100% Pure Himalayan Shilajit Gold Organic Soft Resin Enriched with Fulvic Acid"}
                   loading={index != 0 ? "lazy" : undefined}
