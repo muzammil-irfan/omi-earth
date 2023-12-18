@@ -88,6 +88,7 @@ export default function Cart({
         isOpen={isOpen}
         removeFromCart={removeFromCart}
         cart={cartItem}
+        setCartItem={setCartItem}
       />
     </>
   );
